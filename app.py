@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-model = joblib.load("college_app/fitted_random_forest_pipeline.joblib")
+model = joblib.load("fitted_random_forest_pipeline.joblib")
 
 df = pd.read_csv("my_data.csv")
 
