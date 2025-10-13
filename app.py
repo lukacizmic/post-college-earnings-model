@@ -5,10 +5,10 @@ import pandas as pd
 model = joblib.load("fitted_random_forest_pipeline.joblib")
 df = pd.read_csv("my_data.csv")
 
-row = df[df["name"] == college].iloc[0]
-
 college = st.selectbox("Select College", sorted(df["name"].unique()))
 degree = st.selectbox("Select your degree", sorted(df["degree_type_labels"].unique()))
+
+row = df[df["name"] == college].iloc[0]
 
 input_data = pd.DataFrame({
     "faculty_monthly_salary": [row["faculty_monthly_salary"]],
