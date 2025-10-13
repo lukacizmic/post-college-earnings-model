@@ -4,8 +4,11 @@ import pandas as pd
 
 model = joblib.load("fitted_random_forest_pipeline.joblib")
 
-college = st.text_input("College")
-region = st.text_input("Region")
+df = pd.read_csv("my_data.csv")
+
+college = st.selectbox("Select College", sorted(df["name"].unique()))
+degree = st.selectbox("Select your degree", sorted(df["degree_type_labels"].unique()))
+
 
 if st.button("Predict"):
     input_data = pd.DataFrame({
