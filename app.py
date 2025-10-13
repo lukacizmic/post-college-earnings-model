@@ -6,7 +6,7 @@ model = joblib.load("fitted_random_forest_pipeline.joblib")
 df = pd.read_csv("my_data.csv")
 
 college = st.selectbox("Select College", sorted(df["name"].unique()))
-degree = st.selectbox("Select your degree", sorted(df["degree_type_labels"].unique()))
+degree = st.selectbox("Select your degree", sorted(df["degree_type"].unique()))
 
 row = df[df["name"] == college].iloc[0]
 
