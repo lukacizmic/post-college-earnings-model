@@ -13,7 +13,7 @@ degree = st.selectbox("Select your degree", sorted(df["degree_type_labels"].uniq
 if st.button("Predict"):
     input_data = pd.DataFrame({
         "college": [college],
-        "region": [region]
+        "degree": [degree]
     })
     prediction = model.predict(input_data)
     st.success(f" Estimated earnings: ${prediction[0]:,.2f} per year")
