@@ -21,10 +21,10 @@ input_data = pd.DataFrame({
     "degree_type_labels": [degree],
     "school_region_labels": [row["school_region"]],
     "school_locale_labels": [row["school_locale"]],
-    "log_student_size": [row["log_student_size"]],
-    "log_cost_of_attendance": [row["log_cost_of_attendance"]],
-    "log_in_state_tuition": [row["log_in_state_tuition"]],
-    "log_out_of_state_tuition": [row["log_out_of_state_tuition"]],
+    "log_student_size": [row["student_size"]],
+    "log_cost_of_attendance": [row["cost_of_attendance"]],
+    "log_in_state_tuition": [row["in_state_tuition"]],
+    "log_out_of_state_tuition": [row["out_of_state_tuition"]],
 })
 
 if st.button("Predict Earnings"):
