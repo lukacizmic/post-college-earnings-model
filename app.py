@@ -2,6 +2,15 @@ import streamlit as st
 import joblib
 import pandas as pd
 
+import joblib
+import urllib.request
+
+# Download your model from Google Drive
+url = "https://drive.google.com/uc?id=1ipvmqqDjMsLMAVveJipJUyQ03sJOLFot"
+
+urllib.request.urlretrieve(url, "fitted_random_forest_pipeline.joblib")
+
+
 model = joblib.load("fitted_random_forest_pipeline.joblib")
 df = pd.read_csv("my_data.csv")
 
